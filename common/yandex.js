@@ -49,7 +49,7 @@
             ad_containers[1].remove(); // for good
             for (let node of ad_containers[0].querySelectorAll('div')) {
                 node.style = bgImage;
-                i++;
+                console.log(node.style);
             }       
             console.log(`${i} element(s) set`);
         }
