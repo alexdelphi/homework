@@ -41,5 +41,6 @@
     ]
     misc_containers.forEach(selector => {
         document.querySelector(selector).remove();
+        console.log(selector);
     });
 })();
