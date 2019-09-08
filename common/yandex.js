@@ -28,9 +28,17 @@
     let selector = '.jm.main.widgets div';
     let i = 0;
     let nodes = document.querySelectorAll(selector);
-    let ad_containers = Array.prototype.filter.call(
-        nodes, node => node.querySelector('.Fg.Fg__Pu') && !node.className);
-    console.log(ad_containers);
+    let selector = '.jm.main.widgets div';
+    let ad_containers = [];
+    let i = 0;
+    for (node = document.querySelector(selector); node; node = node.nextSibling)
+    {
+        if (!node.className)
+        {
+            ad_containers.push(node);
+        }
+    }
+    // console.log(ad_containers);
     ad_containers[1].remove(); // for good
     ad_containers[0].querySelectorAll('div').foreach(node => {
         node.style = 'background-image: "" !important';
