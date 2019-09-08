@@ -43,12 +43,15 @@
             }
         }
         // console.log(`length = ${ad_containers.length}`);
+        let i = 0;
         if (ad_containers.length > 1)
         {
             ad_containers[1].remove(); // for good
             for (let node of ad_containers[0].querySelectorAll('div')) {
                 node.style = bgImage;
-            }        
+                i++;
+            }       
+            console.log(`${i} element(s) set`);
         }
     }
     let misc_containers = [
