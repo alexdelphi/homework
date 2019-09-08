@@ -47,11 +47,7 @@
         if (ad_containers.length > 1)
         {
             ad_containers[1].remove(); // for good
-            for (let node of ad_containers[0].querySelectorAll('div')) {
-                node.style = bgImage;
-                console.log(node.style);
-            }       
-            console.log(`${i} element(s) set`);
+            ad_containers[0].querySelector('div div').style = bgImage;
         }
     }
     let misc_containers = [
