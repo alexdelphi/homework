@@ -27,11 +27,13 @@
     node = document.querySelector('.container__banner');
     if (node)
     {
+        // the easy way
         node.remove();
     }
     else
     {
-        selector = '.jb rows__row.rows__row_main';
+        // the obfuscated way
+        selector = '.jb rows__row.rows__row_main > div div';
         let ad_containers = [];
         for (node = document.querySelector(selector); node; node = node.nextSibling)
         {
