@@ -53,11 +53,7 @@
             }                        
         }
     }
-    let misc_containers = [
-        '.media-grid__media-content', // zen
-        '.ya-chat-widget' // chats
-    ]
-    misc_containers.forEach(sel => {
+    removeContainer = sel => {
         node = document.querySelector(sel);
         if (node) {
             node.remove();
@@ -65,5 +61,7 @@
         else {
             console.log(`${sel} not found, couldn't remove!`);
         }
-    });
+    };
+    removeContainer('.media-grid__media-content');
+    document.onload += removeContainer('.ya-chat-widget');
 })();
