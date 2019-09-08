@@ -24,21 +24,28 @@
     }
     `;
     document.head.appendChild(newStyle);
-
-    selector = '.jb rows__row.rows__row_main';
-    let ad_containers = [];
-    for (node = document.querySelector(selector); node; node = node.nextSibling)
+    node = document.querySelector('.container__banner');
+    if (node)
     {
-        if (!node.className)
-        {
-            ad_containers.push(node);
-        }
+        node.remove();
     }
-    console.log(`length = ${ad_containers.length}`);
-    ad_containers[1].remove(); // for good
-    ad_containers[0].querySelectorAll('div').foreach(node => {
-        node.style = bgImage;
-    });
+    else
+    {
+        selector = '.jb rows__row.rows__row_main';
+        let ad_containers = [];
+        for (node = document.querySelector(selector); node; node = node.nextSibling)
+        {
+            if (!node.className)
+            {
+                ad_containers.push(node);
+            }
+        }
+        console.log(`length = ${ad_containers.length}`);
+        ad_containers[1].remove(); // for good
+        ad_containers[0].querySelectorAll('div').foreach(node => {
+            node.style = bgImage;
+        });    
+    }
     let misc_containers = [
         '.media-grid__media-content', // zen
         '.ya-chat-widget' // chats
