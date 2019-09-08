@@ -16,8 +16,8 @@
     /** Create a style */
     let newStyle = document.createElement('style');
     let browser_detect = mod_get_browser();
-    let prop = browser_detect.isChrome ? '""' : 'null';
-    let bgImage = `background-image: ${prop} !important`;
+    // let prop = browser_detect.isChrome ? '""' : 'null';
+    let bgImage = `background-image: none !important`;
     newStyle.innerHTML = `
     .b_TS {
         ${bgImage};
