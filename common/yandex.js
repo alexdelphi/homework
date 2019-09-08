@@ -63,5 +63,9 @@
         }
     };
     removeContainer('.media-grid__media-content');
-    document.onload += setTimeout(removeContainer('.ya-chat-widget'), 5000);
+    document.onload += () => {
+        setTimeout(() => {
+            removeContainer('.ya-chat-widget');
+        }, 5000);
+    } 
 })();
