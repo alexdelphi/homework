@@ -38,7 +38,7 @@
             ad_containers.push(node);
         }
     }
-    // console.log(ad_containers);
+    console.log(`length = ${ad_containers.length}`);
     ad_containers[1].remove(); // for good
     ad_containers[0].querySelectorAll('div').foreach(node => {
         node.style = 'background-image: "" !important';
