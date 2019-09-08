@@ -33,7 +33,7 @@
     else
     {
         // the obfuscated way
-        selector = '.jb rows__row.rows__row_main > div div';
+        selector = '.jb.rows__row.rows__row_main > div div';
         let ad_containers = [];
         for (node = document.querySelector(selector); node; node = node.nextSibling)
         {
@@ -43,10 +43,13 @@
             }
         }
         console.log(`length = ${ad_containers.length}`);
-        ad_containers[1].remove(); // for good
-        ad_containers[0].querySelectorAll('div').foreach(node => {
-            node.style = bgImage;
-        });    
+        if (ad_containers.length > 1)
+        {
+            ad_containers[1].remove(); // for good
+            ad_containers[0].querySelectorAll('div').foreach(node => {
+                node.style = bgImage;
+            });        
+        }
     }
     let misc_containers = [
         '.media-grid__media-content', // zen
