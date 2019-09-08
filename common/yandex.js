@@ -50,13 +50,12 @@
             for (let node of ad_containers[0].querySelectorAll('div'))
             {
                 node.style = bgImage;
-            }            
-            console.log(ad_containers[0].querySelector('div div').className);
+            }                        
         }
     }
     let misc_containers = [
         '.media-grid__media-content', // zen
-        '.ya-chat-widget' // chats
+        '.ya-chat-widget.ya-chat-widget_desktop.ya-chat-widget_theme_light.ya-chat-widget_size_normal' // chats
     ]
     for (let sel of misc_containers) {
         node = document.querySelector(sel);
