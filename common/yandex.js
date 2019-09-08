@@ -25,8 +25,6 @@
     `;
     document.head.appendChild(newStyle);
 
-    let selector = '.jm.main.widgets div';
-    let nodes = document.querySelectorAll(selector);
     selector = '.jb rows__row.rows__row_main';
     let ad_containers = [];
     for (node = document.querySelector(selector); node; node = node.nextSibling)
