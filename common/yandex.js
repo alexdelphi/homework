@@ -39,8 +39,8 @@
         '.media-grid__media-content', // zen
         '.ya-chat-widget' // chats
     ]
-    misc_containers.forEach(selector => {
-        document.querySelector(selector).remove();
-        console.log(selector);
+    misc_containers.forEach(sel => {
+        document.querySelector(sel).remove();
+        console.log(sel);
     });
 })();
