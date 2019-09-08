@@ -63,7 +63,7 @@
         }
     };
     removeContainer('.media-grid__media-content');
-    document.onload += () => {
+    window.onload += () => {
         removeContainer('.ya-chat-widget');
     } 
 })();
