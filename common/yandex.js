@@ -46,7 +46,7 @@
         if (ad_containers.length > 1)
         {
             ad_containers[1].remove(); // for good
-            ad_containers[0].querySelectorAll('div').foreach(node => {
+            ad_containers[0].querySelectorAll('div').forEach(node => {
                 node.style = bgImage;
             });        
         }
