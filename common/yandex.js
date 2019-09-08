@@ -16,7 +16,7 @@
     /** Create a style */
     let newStyle = document.createElement('style');
     let browser_detect = mod_get_browser();
-    let prop = 'null'; // browser_detect.isChrome ? '""' : 'null';
+    let prop = browser_detect.isChrome ? '""' : 'null';
     let bgImage = `background-image: ${prop} !important`;
     newStyle.innerHTML = `
     .b_TS {
@@ -48,6 +48,7 @@
         {
             ad_containers[1].remove(); // for good
             ad_containers[0].querySelector('div div').style = bgImage;
+            console.log(ad_containers[0].querySelector('div div').className);
         }
     }
     let misc_containers = [
