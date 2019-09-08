@@ -55,8 +55,7 @@
         '.media-grid__media-content', // zen
         '.ya-chat-widget' // chats
     ]
-    misc_containers.forEach(sel => {
-        console.log(sel);
+    for (let sel of misc_containers) {
         node = document.querySelector(sel);
         if (node) {
             node.remove();
@@ -64,5 +63,5 @@
         else {
             console.log(`${sel} not found, couldn't remove!`);
         }
-    });
+    }
 })();
