@@ -13,7 +13,6 @@
 'use strict';
 
 (function() {
-    let element = document.querySelector('body');
     /** Create a style */
     let newStyle = document.createElement('style');
     let browser_detect = mod_get_browser();
@@ -28,9 +27,8 @@
 
     let selector = '.jm.main.widgets div';
     let nodes = document.querySelectorAll(selector);
-    let selector = '.jb rows__row.rows__row_main';
+    selector = '.jb rows__row.rows__row_main';
     let ad_containers = [];
-    let i = 0;
     for (node = document.querySelector(selector); node; node = node.nextSibling)
     {
         if (!node.className)
