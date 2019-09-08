@@ -42,7 +42,7 @@
                 ad_containers.push(node);
             }
         }
-        console.log(`length = ${ad_containers.length}`);
+        // console.log(`length = ${ad_containers.length}`);
         if (ad_containers.length > 1)
         {
             ad_containers[1].remove(); // for good
@@ -56,7 +56,13 @@
         '.ya-chat-widget' // chats
     ]
     misc_containers.forEach(sel => {
-        document.querySelector(sel).remove();
         console.log(sel);
+        node = document.querySelector(sel);
+        if (node) {
+            node.remove();
+        }
+        else {
+            console.log(`${sel} not found, couldn't remove!`);
+        }
     });
 })();
