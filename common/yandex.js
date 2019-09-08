@@ -18,17 +18,17 @@
     let newStyle = document.createElement('style');
     let browser_detect = mod_get_browser();
     let prop = browser_detect.isChrome ? '""' : 'null';
+    let bgImage = `background-image: ${prop} !important`
     newStyle.innerHTML = `
     .b_TS {
-        background-image: ${prop} !important;
+        ${bgImage};
     }
     `;
     document.head.appendChild(newStyle);
 
     let selector = '.jm.main.widgets div';
-    let i = 0;
     let nodes = document.querySelectorAll(selector);
-    let selector = '.jm.main.widgets div';
+    let selector = '.jb rows__row.rows__row_main';
     let ad_containers = [];
     let i = 0;
     for (node = document.querySelector(selector); node; node = node.nextSibling)
@@ -41,7 +41,7 @@
     console.log(`length = ${ad_containers.length}`);
     ad_containers[1].remove(); // for good
     ad_containers[0].querySelectorAll('div').foreach(node => {
-        node.style = 'background-image: "" !important';
+        node.style = bgImage;
     });
     let misc_containers = [
         '.media-grid__media-content', // zen
