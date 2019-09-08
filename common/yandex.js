@@ -55,9 +55,9 @@
     }
     let misc_containers = [
         '.media-grid__media-content', // zen
-        '.ya-chat-widget.ya-chat-widget_desktop.ya-chat-widget_theme_light.ya-chat-widget_size_normal' // chats
+        '.ya-chat-widget' // chats
     ]
-    for (let sel of misc_containers) {
+    misc_containers.forEach(sel => {
         node = document.querySelector(sel);
         if (node) {
             node.remove();
@@ -65,5 +65,5 @@
         else {
             console.log(`${sel} not found, couldn't remove!`);
         }
-    }
+    });
 })();
