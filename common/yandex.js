@@ -47,7 +47,10 @@
         if (ad_containers.length > 1)
         {
             ad_containers[1].remove(); // for good
-            ad_containers[0].querySelector('div div').style = bgImage;
+            for (let node of ad_containers[0].querySelectorAll('div'))
+            {
+                node.style = bgImage;
+            }            
             console.log(ad_containers[0].querySelector('div div').className);
         }
     }
