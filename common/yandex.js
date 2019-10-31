@@ -16,7 +16,6 @@
     /** Create a style */
     let newStyle = document.createElement('style');
     let browser_detect = mod_get_browser();
-    // let prop = browser_detect.isChrome ? '""' : 'null';
     let bgImage = `background-image: none !important`;
     newStyle.innerHTML = `
     .b_TS {
@@ -24,6 +23,11 @@
     }
     `;
     document.head.appendChild(newStyle);
+    node = document.querySelector('.teaser__content');
+    if (node)
+    {
+        node.remove();
+    }
     node = document.querySelector('.container__banner');
     if (node)
     {
